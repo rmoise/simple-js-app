@@ -22,9 +22,7 @@ the action (i++)
 */
 for (let i = 0; i < pokemonList.length; i++) {
     if (pokemonList[i].height > 1.0) {
-        document.write(
-            pokemonList[i].name + ` (height: ${pokemonList[i].height})` + " - Wow, that's big!"
-        )
+        document.write(pokemonList[i].name + ` (height: ${pokemonList[i].height})` + " - Wow, that's big!")
     } else {
         /* pokemonList[i].name:
         meaning give me the pokemon list name at position i, position i being 0, then 1, then 2 until the last object in the array
