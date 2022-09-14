@@ -18,8 +18,9 @@ let pokemonRepository = (function () {
         }
     ];
 
+    const someKeys = (object, keys) => keys.some((k) => k in object);
     function add(pokemon) {
-        if (typeof pokemon === 'object' && 'name' in pokemon) {
+        if (someKeys(pokemon, ['name', 'height', 'type'])) {
             pokemonList.push(pokemon);
         } else {
             alert('Pokemon is incorrect');
@@ -30,18 +31,30 @@ let pokemonRepository = (function () {
         return pokemonList;
     }
 
+    function showDetails(pokemon) {
+        console.log(pokemon);
+    }
+
+    function addListItem(pokemon) {
+        let list = document.querySelector('.pokemon-list');
+        let listItem = document.createElement('li');
+        let button = document.createElement('button');
+        button.addEventListener('click', function (event) {
+            showDetails(pokemon);
+        });
+        button.innerText = pokemon.name;
+        button.classList.add('pokedex-button');
+        listItem.appendChild(button);
+        list.appendChild(listItem);
+    }
+
     return {
         add: add,
-        getAll: getAll
+        getAll: getAll,
+        addListItem: addListItem
     };
 })();
 
 pokemonRepository.getAll().forEach(function (pokemon) {
-    if (pokemon.height > 1.0) {
-        document.write(pokemon.name + ` (height: ${pokemon.height})` + " - Wow, that's big!");
-    } else {
-        document.write(pokemon.name + ` (height: ${pokemon.height})` + '<br>');
-    }
+    pokemonRepository.addListItem(pokemon);
 });
-
-console.log(pokemonRepository.getAll());
