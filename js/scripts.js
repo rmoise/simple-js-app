@@ -6,8 +6,6 @@ let pokemonRepository = (function () {
     /* Loads the list of 10 Pokemons from an external link */
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
-    let searchBar = document.querySelector('#search-bar');
-
     /* This function adds new single item to the pokemonList array */
     function add(pokemon) {
         if (typeof pokemon === 'object' && 'name' in pokemon && 'detailsUrl' in pokemon) {
@@ -139,6 +137,7 @@ let pokemonRepository = (function () {
     }
 
     // Adds the search by name functionality for the Search Bar.
+    let searchBar = document.querySelector('#search-bar');
     searchBar.addEventListener('input', function (event) {
         let pokemonList = document.querySelectorAll('.list-group-item');
         let filterUpperCase = searchBar.value.toUpperCase();
@@ -160,6 +159,7 @@ let pokemonRepository = (function () {
             e.preventDefault();
             var $navbar = $('.navbar-collapse');
             $navbar.collapse('hide');
+            // Hides keyboard in iphone safari webapp
             $('#search-bar').blur();
         }
     });
