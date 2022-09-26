@@ -152,11 +152,7 @@ let pokemonRepository = (function () {
                 pokemon.style.display = 'none';
                 $('.error').hide();
             }
-            if (showError) {
-                $('.error').show();
-            } else {
-                $('.error').hide();
-            }
+            showError ? $('.error').show() : $('.error').hide();
         });
     });
 
