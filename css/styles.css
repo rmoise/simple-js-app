@@ -1,18 +1,22 @@
+/* Sets the styles for all html and body tags */
+html,
 body {
-
   background-color: #f1f1f1;
 }
 
+/* Sets the styles for all h1 */
 h1 {
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 17px;
 }
 
+/* Sets the styles for all paragraphs */
 p {
   margin-top: 1rem;
 }
 
+/* Sets the styles for the button */
 .btn {
   width: 100%;
   background-color: #f1f1f1;
@@ -25,6 +29,7 @@ p {
   border-radius: 0;
 }
 
+/* Sets the styles for the button hover */
 .btn:hover {
   border-color: rgba(0, 0, 0, 0.15);
   background-color: aquamarine;
@@ -32,19 +37,23 @@ p {
   border: 3px solid #333;
 }
 
+/* Sets the styles for the button click. Removes default color */
 .btn:focus {
   outline: none;
   box-shadow: none;
 }
 
+/* Sets the styles for the modal header */
 .modal-header {
   border-bottom:  0;
 }
 
+/* Sets the styles for the modal footer */
 .modal-footer {
   border-top:  0;
 }
 
+/* Sets the styles for the modal title. Adds an underline element */
 .modal-title {
   content: ""; /* This is necessary for the pseudo element to work. */
   display: block; /* This will put the pseudo element on its own line. */
@@ -58,6 +67,7 @@ p {
 
 }
 
+/* Sets the styles for the close button */
 .close {
   font-size: 3.5rem;
   font-weight: 300;
@@ -65,17 +75,20 @@ p {
   opacity: .9;
 }
 
+/* Sets the styles for the close hover button */
 .close:hover {
   color: rgb(105, 223, 184);
   opacity: .9;
 }
 
+/* Sets the styles for the modal */
 .modal-content {
   border-radius: 0;
   border: 3px solid #333333;
   background: #f1f1f1;
 }
 
+/* Sets the styles for the image of Pokemons in modal */
 img {
   margin-top: 15px;
   display: block;
@@ -83,42 +96,87 @@ img {
   margin-right: auto;
 }
 
+/* Sets the styles for the list of Pokemons */
 .list-group {
-  margin-top: 80px;
+  margin-top: 18px;
 }
 
+/* Sets the styles for the list of Pokemons */
 .list-group-item {
   background-color: #f1f1f1;
   border-top: 0;
   border-bottom: 0;
+  padding: 0.5rem 1.25rem;
 }
 
+/* Sets the styles for the list of Pokemons */
 .list-group-item:first-child {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
+/* Sets the styles for the list of Pokemons */
 .list-group-item:last-child {
   padding-bottom: 20px;
 }
 
+/* Sets the styles for the navbar. Adds a gap to the search bar nav in mobile */
+.navbar {
+  gap: 15px;
+}
+
+/* Sets the styles for the navbar. Causes the search bar to be aligned at the right-end of the page */
+.navbar-expand-lg .navbar-collapse {
+  justify-content: flex-end;
+}
+
+/* Sets the styles for the navbar background */
 .bg-light {
   background-color: #f1f1f1!important;
   border-bottom: 3px solid rgb(0, 0, 0);
-  height: 70px;
+  padding: 20px;
+  /* height: 70px; */
 }
 
-.list-group-item {
-  padding: 0.5rem 1.25rem;
-}
-
+/* Sets the styles for the logo */
 .navbar-brand {
   font-weight: bold;
-  margin: 0 auto!important;
   font-size: 26px;
 }
 
-.navbar-collapse {
-  flex-grow: 0;
+/* Sets the styles for the input field. Adds a custom "X" icon that can be displayed on mobile */
+input[type="search"]::-webkit-search-cancel-button {
+
+  /* Remove default */
+  -webkit-appearance: none;
+
+  /* Adds custom styles */
+  height: 14px;
+  width: 14px;
+  display: block;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAn0lEQVR42u3UMQrDMBBEUZ9WfQqDmm22EaTyjRMHAlM5K+Y7lb0wnUZPIKHlnutOa+25Z4D++MRBX98MD1V/trSppLKHqj9TTBWKcoUqffbUcbBBEhTjBOV4ja4l4OIAZThEOV6jHO8ARXD+gPPvKMABinGOrnu6gTNUawrcQKNCAQ7QeTxORzle3+sDfjJpPCqhJh7GixZq4rHcc9l5A9qZ+WeBhgEuAAAAAElFTkSuQmCC);
+  /* setup all the background tweaks for our custom icon */
+  background-repeat: no-repeat;
+
+  /* icon size */
+  background-size: 14px;
+
 }
 
+/* Sets the styles for the toggler. Adds color to the navbar toggler icon hamburger icon */
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(51, 51, 51)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* Sets the styles for the toggler. Customizes the navbar toggler border */
+.custom-toggler.navbar-toggler {
+  border: 3px solid rgb(51, 51, 51);
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+.error {
+  display:none;
+  padding: 20px;
+}
