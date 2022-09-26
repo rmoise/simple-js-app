@@ -152,11 +152,7 @@ let pokemonRepository = (function () {
                 pokemon.style.display = 'none';
                 $('.error').hide();
             }
-            if (showError) {
-                $('.error').show();
-            } else {
-                $('.error').hide();
-            }
+            showError ? $('.error').show() : $('.error').hide();
         });
     });
 
@@ -172,6 +168,7 @@ let pokemonRepository = (function () {
             $('#search-bar').blur();
         }
     });
+
     // On click hides the navbar. It reads if .navbar-collapse has the word show in classes (which means menu is opened) and hides the navbar when you click/tap anywhere.
     $(document).click(function (event) {
         if ($(event.target).parents('.navbar-collapse').length < 1) {
