@@ -141,12 +141,21 @@ let pokemonRepository = (function () {
     searchBar.addEventListener('input', function (event) {
         let pokemonList = document.querySelectorAll('.list-group-item');
         let filterUpperCase = searchBar.value.toUpperCase();
+        let showError = true;
 
         pokemonList.forEach(function (pokemon) {
             if (pokemon.innerText.toUpperCase().indexOf(filterUpperCase) > -1) {
                 pokemon.style.display = '';
+                showError = false;
             } else {
+                // makes element invisible and hides error message
                 pokemon.style.display = 'none';
+                $('.error').hide();
+            }
+            if (showError) {
+                $('.error').show();
+            } else {
+                $('.error').hide();
             }
         });
     });
