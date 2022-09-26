@@ -157,10 +157,6 @@ input[type="search"]::-webkit-search-cancel-button {
   box-shadow: none;
 }
 
-.custom-toggler.navbar-toggler::after {
-  margin-bottom: 20px;
-}
-
 .navbar-expand-lg .navbar-collapse {
   justify-content: flex-end;
 }
