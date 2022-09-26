@@ -157,18 +157,18 @@ let pokemonRepository = (function () {
         if (e.keyCode == 13) {
             // do something
             e.preventDefault();
-            var $navbar = $('.navbar-collapse');
+            let $navbar = $('.navbar-collapse');
             $navbar.collapse('hide');
             // Hides keyboard in iphone safari webapp
             $('#search-bar').blur();
         }
     });
-    // On click hides the navbar
+    // On click hides the navbar. It reads if .navbar-collapse has the word show in classes (which means menu is opened) and hides the navbar when you click/tap anywhere.
     $(document).click(function (event) {
         if ($(event.target).parents('.navbar-collapse').length < 1) {
-            var clickover = $(event.target);
-            var $navbar = $('.navbar-collapse');
-            var _opened = $navbar.hasClass('show');
+            let clickover = $(event.target);
+            let $navbar = $('.navbar-collapse');
+            let _opened = $navbar.hasClass('show');
             if (_opened === true && !clickover.hasClass('navbar-toggle')) {
                 $navbar.collapse('hide');
             }
