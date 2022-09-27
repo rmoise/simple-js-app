@@ -138,7 +138,7 @@ let pokemonRepository = (function () {
 
     // Adds the search by name functionality for the Search Bar.
     let searchBar = document.querySelector('#search-bar');
-    searchBar.addEventListener('input', function (event) {
+    searchBar.addEventListener('input', function () {
         let pokemonList = document.querySelectorAll('.list-group-item');
         let filterUpperCase = searchBar.value.toUpperCase();
         let showError = true;
