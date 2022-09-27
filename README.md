@@ -1,16 +1,16 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/rmoise/simple-js-app">
     <img src="img/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h1 align="center">Pokédex - Simple JS App. Technical Case Study</h1>
 
   <p align="center">
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://rmoise.github.io/simple-js-app/">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/rmoise/simple-js-app/issues">Report Bug</a>
     ·
     <a href="https://github.com/rmoise/simple-js-app/issues">Request Feature</a>
   </p>
@@ -27,7 +27,7 @@
       </ul>
     </li>
     <li>
-      <a href="#the-5-ws">The 5 W's</a>
+      <a href="#the-5-ws">The 5 Ws</a>
         <li><a href="#features-and-requirements">Features and Requirements</a></li>
         <ul>
         <li><a href="#user-goals">User Goals</a></li>
@@ -41,6 +41,7 @@
 </details>
 
 ## Objective
+
 ![Product Name Screen Shot](img/screenshot.png)
 
 To build a small web application with HTML, CSS, and JavaScript that loads  data from an external API and enables the viewing of data points in detail.
@@ -73,7 +74,7 @@ My users should be able to view a list of data and see more details for a given 
 
 ### Technical Requirements
 
-#### Required:
+#### Required
 
 <!-- prettier-ignore -->
 * The app must load data from an external API; for instance, the Pokémon API .
@@ -95,7 +96,6 @@ My users should be able to view a list of data and see more details for a given 
 * [![JavaScript][javascript.com]][javascript-url]
 * [![Bootstrap][bootstrap.com]][bootstrap-url]
 * [![JQuery][jquery.com]][jquery-url]
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
