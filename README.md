@@ -37,7 +37,6 @@
     <li><a href="#required">Required</a></li>
     </ul>
     <li><a href="#built-with">Built With</a></li>
-    <li><a href="#acknowledgements">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -92,12 +91,17 @@ My users should be able to view a list of data and see more details for a given 
 
 ### Built With
 
--   [![Bootstrap][bootstrap.com]][bootstrap-url]
--   [![JQuery][jquery.com]][jquery-url]
+<!-- prettier-ignore -->
+* [![JavaScript][javascript.com]][javascript-url]
+* [![Bootstrap][bootstrap.com]][bootstrap-url]
+* [![JQuery][jquery.com]][jquery-url]
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
+[javascript.com]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[javascript-url]: https://www.javascript.com
 [bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [bootstrap-url]: https://getbootstrap.com
 [jquery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
