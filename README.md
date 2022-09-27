@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="img/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h1 align="center">Pokédex - Simple JS App. Technical Case Study</h1>
@@ -42,8 +42,7 @@
 </details>
 
 ## Objective
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![Product Name Screen Shot](img/screenshot.png)
 
 To build a small web application with HTML, CSS, and JavaScript that loads  data from an external API and enables the viewing of data points in detail.
 To build a small web application with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail.
@@ -95,3 +94,10 @@ My users should be able to view a list of data and see more details for a given 
 
 -   [![Bootstrap][bootstrap.com]][bootstrap-url]
 -   [![JQuery][jquery.com]][jquery-url]
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
+[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[JQuery-url]: https://jquery.com
