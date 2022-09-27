@@ -42,7 +42,7 @@
 
 ## Objective
 
-![Product Name Screen Shot](img/screenshot.png)
+![Pokedex App Screen Shot](img/pokedex-app.png)
 
 To build a small web application with HTML, CSS, and JavaScript that loads  data from an external API and enables the viewing of data points in detail.
 To build a small web application with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail.
@@ -96,6 +96,8 @@ My users should be able to view a list of data and see more details for a given 
 * [![JavaScript][javascript.com]][javascript-url]
 * [![Bootstrap][bootstrap.com]][bootstrap-url]
 * [![JQuery][jquery.com]][jquery-url]
+* ![html.com]
+* ![css.com]
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -106,3 +108,6 @@ My users should be able to view a list of data and see more details for a given 
 [bootstrap-url]: https://getbootstrap.com
 [jquery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [jquery-url]: https://jquery.com
+[html.com]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
+[css.com]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
+
