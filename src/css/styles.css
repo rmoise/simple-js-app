@@ -133,7 +133,7 @@ img {
 /* Sets the styles for the navbar background */
 .bg-light {
   background-color: #f1f1f1!important;
-  border-bottom: 3px solid rgb(0, 0, 0);
+  border-bottom: 3px solid #333;
   padding: 20px;
   /* height: 70px; */
 }
@@ -142,6 +142,24 @@ img {
 .navbar-brand {
   font-weight: bold;
   font-size: 26px;
+}
+.navbar-light .navbar-brand {
+  color: #333;
+}
+
+/* Sets the styles for the icon logo */
+.img-logo {
+  width: 30px;
+  float: left;
+  margin-right: 8px;
+  margin-top: 0;
+}
+
+/* Sets the styles for the icon logo and text */
+.icon,
+.text {
+  vertical-align: middle;
+  display: inline-block;
 }
 
 /* Sets the styles for the input field. Adds a custom "X" icon that can be displayed on mobile */
@@ -176,7 +194,9 @@ input[type="search"]::-webkit-search-cancel-button {
   box-shadow: none;
 }
 
+/* Sets the styles for the return nothing search message */
 .error {
   display:none;
   padding: 20px;
 }
+
