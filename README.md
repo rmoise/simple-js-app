@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/rmoise/simple-js-app">
-    <img src="img/logo.png" alt="Logo" width="80" height="80">
+    <img src="img/logo-readme.png" alt="Logo" width="80" height="80">
   </a>
 
   <h1 align="center">Pokédex - Simple JS App. Technical Case Study</h1>
