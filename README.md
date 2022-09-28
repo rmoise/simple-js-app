@@ -44,7 +44,7 @@
 
 ## Objective
 
-![Pokedex App Screen Shot](img/pokedex-app.png)
+[![Pokedex App Screenshot][product-screenshot]](https://rmoise.github.io/simple-js-app/)
 
 To build a small web application with HTML, CSS, and JavaScript that loads  data from an external API and enables the viewing of data points in detail.
 To build a small web application with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail.
@@ -122,4 +122,4 @@ My users should be able to view a list of data and see more details for a given 
 [jquery-url]: https://jquery.com
 [html.com]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
 [css.com]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
-
+[product-screenshot]: img/pokedex-app.png
