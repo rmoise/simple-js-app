@@ -47,9 +47,13 @@
 To build a small web application with HTML, CSS, and JavaScript that loads  data from an external API and enables the viewing of data points in detail.
 To build a small web application with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Context
 
 The best way to learn about programing is to complete a project using that programming language. This project helped me build a complete, fully functioning JavaScript web application.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## The 5 W's
 
@@ -58,6 +62,8 @@ The best way to learn about programing is to complete a project using that progr
 3. When—The code for the app is accessible for viewing in my GitHub repository.
 4. Where—Potential employers, clients, and collaborators might look at the code directly from my GitHub repository or be directed to my GitHub profile from my portfolio site.
 5. Why—For my potential employers, clients, and collaborators to see how I create the architecture of a JavaScript app, as well as how I test and debug my code.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Features and Requirements
 
@@ -90,6 +96,8 @@ My users should be able to view a list of data and see more details for a given 
 * The app should be deployed to a publicly accessible platform like GitHub Pages (you can  review how to do this in Intro to Frontend Development's Exercise 10: Code Quality, Testing, &  Web Hosting ).
 * The app must work in Chrome, Firefox, Safari, Edge, and Internet Explorer 11.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Built With
 
 <!-- prettier-ignore -->
@@ -98,6 +106,8 @@ My users should be able to view a list of data and see more details for a given 
 * [![JQuery][jquery.com]][jquery-url]
 * ![html.com]
 * ![css.com]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
