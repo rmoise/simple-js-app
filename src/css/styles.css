@@ -214,3 +214,11 @@ input:-webkit-autofill:focus {
 input[data-autocompleted] {
   background-color: transparent !important;
 }
+
+/* Disabled Previous and Next buttons */
+.pokemon-nav1--disabled {
+  visibility: hidden;
+}
+.pokemon-nav2--disabled {
+  visibility: hidden;
+}
