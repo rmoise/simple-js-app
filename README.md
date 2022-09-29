@@ -39,6 +39,7 @@
     <li><a href="#required">Required</a></li>
     </ul>
     <li><a href="#built-with">Built With</a></li>
+     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -108,6 +109,13 @@ My users should be able to view a list of data and see more details for a given 
 * [![JQuery][jquery.com]][jquery-url]
 * ![html.com]
 * ![css.com]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Acknowledgments
+
+<!-- prettier-ignore -->
+* [Pokedex API](https://pokeapi.co/api/v2/pokemon/?limit=250)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
