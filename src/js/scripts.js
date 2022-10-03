@@ -2,7 +2,6 @@
 let pokemonRepository = (function () {
     /* Adds an array of 4 Pokemons (objects), which contains a list of Pokemons */
     let pokemonList = [];
-
     /* Loads the list of 10 Pokemons from an external link */
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
@@ -21,25 +20,70 @@ let pokemonRepository = (function () {
     }
 
     function addListItem(pokemon) {
+        loadDetails(pokemon).then(function () {
+            let type = document.createElement('p');
+
+            let elements = pokemon.types
+                ? `
+              <small>
+
+              </small>
+              <small class="type ${pokemon.types}">
+
+              </small>
+              `
+                : ` `;
+            let acc = `
+
+              <div class="item__image ${pokemon.types}">
+
+              </div>
+              <div class="item__informations">
+
+                  <div class="container__type">
+                      <small class="type ${pokemon.types.split(',')[0]}">
+                        ${pokemon.types.split(',')[0]}
+                      </small>
+                      ${elements}
+                  </div>
+              </div>
+
+            `;
+            type.innerHTML += acc;
+
+            let title = document.createElement('h4');
+            title.classList.add('card-title');
+            title.innerHTML = pokemon.name;
+
+            let image = document.createElement('img');
+            image.setAttribute('src', pokemon.imageUrl);
+            listItem.append(image);
+
+            listItem.appendChild(title);
+            listItem.appendChild(type);
+            listItem.appendChild(button);
+        });
+
+        /* loadDetails(pokemon).then(function () { */
         // Selects elements with the list-group class
-        let list = document.querySelector('.pokemon-list');
+        let list = document.querySelector('#pokemon-list');
         // Creates a li tag
         let listItem = document.createElement('li');
         // Adds classes for the li tag
-        listItem.classList.add('list-group-item');
+        listItem.classList.add('card');
 
         // Creates a button
         let button = document.createElement('button');
         // Adds classes for the button tag
         button.classList.add('btn', 'button');
         // Adds the names from pokemonList array on the button
-        button.innerText = pokemon.name;
+        button.innerText = 'View';
         button.setAttribute('data-toggle', 'modal');
         button.setAttribute('data-target', '#pokemonModal');
 
         //Appends the button and the list to their parents
-        listItem.appendChild(button);
         list.appendChild(listItem);
+
         button.addEventListener('click', function () {
             showDetails(pokemon);
         });
@@ -98,6 +142,7 @@ let pokemonRepository = (function () {
                 item.types = details.types.map((type) => type.type.name).join(', ');
                 item.weight = details.weight;
                 item.abilities = details.abilities.map((ability) => ability.ability.name).join(', ');
+                item.id = details.id;
             })
             .catch(function (e) {
                 hideLoadingMessage();
@@ -112,10 +157,12 @@ let pokemonRepository = (function () {
             // Selects the classes, assigns it to a variable
             let modalBody = $('.modal-body');
             let modalTitle = $('.modal-title');
+            let modalFooter = $('.modal-footer');
 
             // Empty the modalTitle and modalBody to avoid overlapping and adding content.
             modalTitle.empty();
             modalBody.empty();
+            modalFooter.empty();
 
             // Selects details about Pokemon that will be displayed in Modal.
             let nameElement = $('<h1>' + pokemon.name + '</h1>');
@@ -126,6 +173,51 @@ let pokemonRepository = (function () {
             let typesElement = $('<p>' + '<b>Types</b> ' + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + pokemon.types + '</p>');
             let abilitiesElement = $('<p>' + '<b>Abilities</b> ' + '\xa0\xa0\xa0' + pokemon.abilities + '</p>');
 
+            // Adds Previous buttons to the Modal footer and allows for browsing pokemon.
+            // Create a "Previous" button
+            let navigateLeftElement = document.createElement('button');
+            // Add a class to the button
+            navigateLeftElement.classList.add('btn');
+            // Name button
+            navigateLeftElement.innerText = 'Previous';
+            // Add an event listener
+            navigateLeftElement.addEventListener('click', () => loadPreviousPokemon(pokemon));
+
+            // hides the "Previous" button when the value is at the start of the pokemon list.
+            if (getPokemonIndex(pokemon) === 0) {
+                navigateLeftElement.classList.add('pokemon-nav1--disabled');
+            }
+
+            // Adds Previous buttons to the Modal footer and allows for browsing pokemon.
+            // Create a "Next" button
+            let navigateRightElement = document.createElement('div');
+            // Add a class to the button
+            navigateRightElement.classList.add('btn');
+            // Name button
+            navigateRightElement.innerText = 'Next';
+            // Add an event listener
+            navigateRightElement.addEventListener('click', () => loadNextPokemon(pokemon));
+
+            // hides the "Next" button when the value reaches the end of the pokemon list.
+            if (getPokemonIndex(pokemon) === 150) {
+                navigateRightElement.classList.add('pokemon-nav2--disabled');
+            }
+
+            // Function to get pokemon index
+            function getPokemonIndex(pokemon) {
+                return pokemonList.findIndex((p) => p.name === pokemon.name);
+            }
+
+            // Function to load previous pokemon
+            function loadPreviousPokemon(pokemon) {
+                showDetails(pokemonList[getPokemonIndex(pokemon) - 1]);
+            }
+
+            // Function to load next pokemon
+            function loadNextPokemon(pokemon) {
+                showDetails(pokemonList[getPokemonIndex(pokemon) + 1]);
+            }
+
             // Appends to their parents
             modalTitle.append(nameElement);
             modalBody.append(imageElementFront);
@@ -133,13 +225,15 @@ let pokemonRepository = (function () {
             modalBody.append(weightElement);
             modalBody.append(typesElement);
             modalBody.append(abilitiesElement);
+            modalFooter.append(navigateLeftElement);
+            modalFooter.append(navigateRightElement);
         });
     }
 
     // Adds the search by name functionality for the Search Bar.
     let searchBar = document.querySelector('#search-bar');
     searchBar.addEventListener('input', function () {
-        let pokemonList = document.querySelectorAll('.list-group-item');
+        let pokemonList = document.querySelectorAll('.card');
         let filterUpperCase = searchBar.value.toUpperCase();
         let showError = true;
 

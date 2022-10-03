@@ -5,12 +5,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Adds the app name in tab of browser -->
-    <title>Simple JS Apps</title>
+    <title>Simple JS Apps Copy</title>
+    <!-- Adds the favicon in tab of browser -->
+    <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon" />
     <!-- Adds a link to BootstrapCDN. Bootstrap CSS. -->
     <!-- Inserts the link to BootstrapCDN before any other custom styles file -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Inserts the link to the custom styles file -->
-    <link href="dist/css/styles.min.css" rel="stylesheet" type="text/css" />
+    <link href="src/css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -19,7 +21,7 @@
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
 
         <!-- Adds the Pokemon logo inside the nav Bar -->
-        <a class="navbar-brand" href="index.html">POKEDEX</a>
+        <a class="navbar-brand" href="index.html"><span class="icon"><img class="img-logo" src="img/logo.svg"></span><span class="text">POKEDEX</span></a>
         <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,12 +37,17 @@
     </nav>
 
     <!-- Adds the list of Pokemons using Bootstrap. -->
-    <ul class="pokemon-list list-group"></ul>
-    <div class="error">No Pokemon Found from Your Search</div>
+    <div class="container col-sm col-md col-lg">
+        <ul id="pokemon-list"></ul>
+    </div>
+
+
+
+    <div class="error">No Pokemon found from your search</div>
 
     <!-- Adds the pokemonModal using Bootstrap -->
     <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="#exampleModalCenter" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="#exampleModalCenter">Modal title</h5>
@@ -62,9 +69,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="dist/lib/promise-polyfill.min.js"></script>
-    <script src="dist/lib/fetch-polyfill.min.js"></script>
-    <script src="dist/js/scripts.min.js"></script>
+    <script src="src/lib/promise-polyfill.js"></script>
+    <script src="src/lib/fetch-polyfill.js"></script>
+    <script src="src/js/scripts.js"></script>
 </body>
 
 </html>
