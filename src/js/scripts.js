@@ -57,6 +57,7 @@ let pokemonRepository = (function () {
 
             let image = document.createElement('img');
             image.setAttribute('src', pokemon.imageUrl);
+            image.classList.add('pokemon-img');
             listItem.append(image);
 
             listItem.appendChild(title);
@@ -137,7 +138,7 @@ let pokemonRepository = (function () {
             .then(function (details) {
                 hideLoadingMessage();
                 // Adds the details to the items
-                item.imageUrl = details.sprites.front_default;
+                item.imageUrl = details.sprites.other.dream_world.front_default;
                 item.height = details.height;
                 item.types = details.types.map((type) => type.type.name).join(', ');
                 item.weight = details.weight;
