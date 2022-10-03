@@ -81,20 +81,18 @@ p {
 }
 
 @keyframes bounce {
-  0%, 100%, 20%, 50%, 80% {
-    -webkit-transform: translateY(0);
-    -ms-transform:     translateY(0);
-    transform:         translateY(0)
+  20% {
+    transform: translateY(-6px);
   }
   40% {
-    -webkit-transform: translateY(-30px);
-    -ms-transform:     translateY(-30px);
-    transform:         translateY(-30px)
+    transform: translateY(0px);
   }
-  60% {
-    -webkit-transform: translateY(-15px);
-    -ms-transform:     translateY(-15px);
-    transform:         translateY(-15px)
+
+  80% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -294,7 +292,6 @@ input[data-autocompleted] {
   margin-bottom: 20px;
 }
 
-
 /* BACKGROUND OF TYPES POKEMONS*/
 small.type.grass {
   background: #DEFDE0;
@@ -385,7 +382,6 @@ small.type.normal {
 .card:hover {
   animation: bounce 0.5s linear;
 }
-
 
 .small, small {
   font-size: 100%;
