@@ -198,8 +198,10 @@ img {
 
 /* Sets the styles for the navbar background */
 .bg-light {
+
   background-color: #fff!important;
   border-bottom: 3px solid aquamarine;
+  
   padding: 20px;
   /* height: 70px; */
 }
@@ -268,6 +270,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* Sets the styles for the input field search bar */
 .form-control:focus {
+
   border-color: #333;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px 1px #333;
 }
@@ -287,13 +290,13 @@ input[data-autocompleted] {
 }
 .pokemon-nav2--disabled {
   visibility: hidden;
+
 }
 
 .row {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
 
 /* BACKGROUND OF TYPES POKEMONS*/
 small.type.grass {
@@ -386,7 +389,7 @@ small.type.normal {
   animation: bounce 0.5s linear;
 }
 
-
 .small, small {
   font-size: 100%;
 }
+

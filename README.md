@@ -1,8 +1,10 @@
+<a name="readme-top"></a>
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/rmoise/simple-js-app">
-    <img src="img/logo.png" alt="Logo" width="80" height="80">
+    <img src="img/logo-readme.png" alt="Logo" width="80" height="80">
   </a>
 
   <h1 align="center">Pokédex - Simple JS App. Technical Case Study</h1>
@@ -37,19 +39,24 @@
     <li><a href="#required">Required</a></li>
     </ul>
     <li><a href="#built-with">Built With</a></li>
+     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
 ## Objective
 
-![Pokedex App Screen Shot](img/pokedex-app.png)
+[![Pokedex App Screenshot][product-screenshot]](https://rmoise.github.io/simple-js-app/)
 
 To build a small web application with HTML, CSS, and JavaScript that loads  data from an external API and enables the viewing of data points in detail.
 To build a small web application with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Context
 
 The best way to learn about programing is to complete a project using that programming language. This project helped me build a complete, fully functioning JavaScript web application.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## The 5 W's
 
@@ -58,6 +65,8 @@ The best way to learn about programing is to complete a project using that progr
 3. When—The code for the app is accessible for viewing in my GitHub repository.
 4. Where—Potential employers, clients, and collaborators might look at the code directly from my GitHub repository or be directed to my GitHub profile from my portfolio site.
 5. Why—For my potential employers, clients, and collaborators to see how I create the architecture of a JavaScript app, as well as how I test and debug my code.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Features and Requirements
 
@@ -90,6 +99,8 @@ My users should be able to view a list of data and see more details for a given 
 * The app should be deployed to a publicly accessible platform like GitHub Pages (you can  review how to do this in Intro to Frontend Development's Exercise 10: Code Quality, Testing, &  Web Hosting ).
 * The app must work in Chrome, Firefox, Safari, Edge, and Internet Explorer 11.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Built With
 
 <!-- prettier-ignore -->
@@ -98,6 +109,15 @@ My users should be able to view a list of data and see more details for a given 
 * [![JQuery][jquery.com]][jquery-url]
 * ![html.com]
 * ![css.com]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Acknowledgments
+
+<!-- prettier-ignore -->
+* [Pokedex API](https://pokeapi.co/api/v2/pokemon/?limit=250)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -110,4 +130,4 @@ My users should be able to view a list of data and see more details for a given 
 [jquery-url]: https://jquery.com
 [html.com]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
 [css.com]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
-
+[product-screenshot]: img/pokedex-app.png
