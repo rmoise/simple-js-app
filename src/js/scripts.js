@@ -2,7 +2,6 @@
 let pokemonRepository = (function () {
     /* Adds an array of 4 Pokemons (objects), which contains a list of Pokemons */
     let pokemonList = [];
-
     /* Loads the list of 10 Pokemons from an external link */
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
@@ -21,25 +20,71 @@ let pokemonRepository = (function () {
     }
 
     function addListItem(pokemon) {
+        loadDetails(pokemon).then(function () {
+            let type = document.createElement('p');
+
+            let elements = pokemon.types
+                ? `
+              <small>
+
+              </small>
+              <small class="type ${pokemon.types}">
+
+              </small>
+              `
+                : ` `;
+            let acc = `
+
+              <div class="item__image ${pokemon.types}">
+
+              </div>
+              <div class="item__informations">
+
+                  <div class="container__type">
+                      <small class="type ${pokemon.types.split(',')[0]}">
+                        ${pokemon.types.split(',')[0]}
+                      </small>
+                      ${elements}
+                  </div>
+              </div>
+
+            `;
+            type.innerHTML += acc;
+
+            let title = document.createElement('h4');
+            title.classList.add('card-title');
+            title.innerHTML = pokemon.name;
+
+            let image = document.createElement('img');
+            image.setAttribute('src', pokemon.imageUrl);
+            image.classList.add('pokemon-img');
+            listItem.append(image);
+
+            listItem.appendChild(title);
+            listItem.appendChild(type);
+            listItem.appendChild(button);
+        });
+
+        /* loadDetails(pokemon).then(function () { */
         // Selects elements with the list-group class
-        let list = document.querySelector('.pokemon-list');
+        let list = document.querySelector('#pokemon-list');
         // Creates a li tag
         let listItem = document.createElement('li');
         // Adds classes for the li tag
-        listItem.classList.add('list-group-item');
+        listItem.classList.add('card');
 
         // Creates a button
         let button = document.createElement('button');
         // Adds classes for the button tag
         button.classList.add('btn', 'button');
         // Adds the names from pokemonList array on the button
-        button.innerText = pokemon.name;
+        button.innerText = 'View';
         button.setAttribute('data-toggle', 'modal');
         button.setAttribute('data-target', '#pokemonModal');
 
         //Appends the button and the list to their parents
-        listItem.appendChild(button);
         list.appendChild(listItem);
+
         button.addEventListener('click', function () {
             showDetails(pokemon);
         });
@@ -93,11 +138,12 @@ let pokemonRepository = (function () {
             .then(function (details) {
                 hideLoadingMessage();
                 // Adds the details to the items
-                item.imageUrl = details.sprites.front_default;
+                item.imageUrl = details.sprites.other.dream_world.front_default;
                 item.height = details.height;
                 item.types = details.types.map((type) => type.type.name).join(', ');
                 item.weight = details.weight;
                 item.abilities = details.abilities.map((ability) => ability.ability.name).join(', ');
+                item.id = details.id;
             })
             .catch(function (e) {
                 hideLoadingMessage();
@@ -188,7 +234,7 @@ let pokemonRepository = (function () {
     // Adds the search by name functionality for the Search Bar.
     let searchBar = document.querySelector('#search-bar');
     searchBar.addEventListener('input', function () {
-        let pokemonList = document.querySelectorAll('.list-group-item');
+        let pokemonList = document.querySelectorAll('.card');
         let filterUpperCase = searchBar.value.toUpperCase();
         let showError = true;
 
