@@ -388,3 +388,7 @@ small.type.normal {
 small {
     font-size: 100%;
 }
+
+.loading {
+    padding: 20px;
+}
