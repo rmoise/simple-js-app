@@ -267,6 +267,10 @@ input[type='search']::-webkit-search-cancel-button {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px 1px #333;
 }
 
+.form-control {
+    width: 100% !important;
+}
+
 /* Change the styles for the input field search bar */
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
