@@ -23,32 +23,14 @@ let pokemonRepository = (function () {
         loadDetails(pokemon).then(function () {
             let type = document.createElement('p');
 
-            let elements = pokemon.types
-                ? `
-              <small>
-
-              </small>
-              <small class="type ${pokemon.types}">
-
-              </small>
-              `
-                : ` `;
-            let acc = `
-
-              <div class="item__image ${pokemon.types}">
-
-              </div>
+            let acc = `</div>
               <div class="item__informations">
-
                   <div class="container__type">
                       <small class="type ${pokemon.types.split(',')[0]}">
                         ${pokemon.types.split(',')[0]}
                       </small>
-                      ${elements}
                   </div>
-              </div>
-
-            `;
+              </div>`;
             type.innerHTML += acc;
 
             let title = document.createElement('h4');
