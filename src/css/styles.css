@@ -141,8 +141,8 @@ p {
 /* Sets the styles for the image of Pokemons in modal */
 .pokemon-img,
 .modal-img {
-    max-width: 40%;
-    max-height: 40%;
+    max-width: 50%;
+    max-height: 50%;
     margin: auto;
     position: relative;
     display: block;
