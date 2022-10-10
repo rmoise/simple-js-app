@@ -27,28 +27,17 @@ p {
 
 /* Sets the styles for the button */
 .btn {
-  align-items: center;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
   box-sizing: border-box;
   cursor: pointer;
-  display: inline-flex;
-  font-weight: 600;
-  justify-content: center;
-  line-height: 1.25;
-  margin: 0;
-  min-height: 3rem;
-  position: relative;
-  text-decoration: none;
   transition: all 250ms;
-  user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  vertical-align: baseline;
   width: 100%;
   background-color: aquamarine;
   border: 3px solid rgb(51, 51, 51);
   color: #333;
-  padding: 15px 20px;
+  padding: 17px 20px;
   font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -82,24 +71,18 @@ p {
 }
 
 @keyframes bounce {
-  0%,
-  100%,
-  20%,
-  50%,
-  80% {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
+  20% {
+    transform: translateY(-6px);
   }
   40% {
-    -webkit-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    transform: translateY(-30px);
+    transform: translateY(0px);
   }
-  60% {
-    -webkit-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    transform: translateY(-15px);
+
+  80% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -130,7 +113,6 @@ p {
 
   width: 95.12%; /* Change this to whatever width you want. */
 
-  border-bottom: 3px solid #333; /* This creates the border. Replace black with whatever color you want. */
   position: absolute;
   right: 10px;
   left: 10px;
@@ -141,29 +123,39 @@ p {
   font-size: 3.5rem;
   font-weight: 300;
   line-height: 0.6;
-  opacity: 0.9;
+  opacity: 00.9;
 }
 
 /* Sets the styles for the close hover button */
 .close:hover {
-  color: rgb(105, 223, 184);
-  opacity: 0.9;
+  color: aquamarine;
 }
 
 /* Sets the styles for the modal */
 .modal-content {
   border-radius: 0;
-  border: 3px solid #333;
+  border: 3px solid aquamarine;
   background: #fff;
 }
 
 /* Sets the styles for the image of Pokemons in modal */
-img {
-  margin-top: 15px;
+.pokemon-img,
+.modal-img {
+  max-width: 50%;
+  max-height: 50%;
+  margin: auto;
+  position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+}
+
+.pokemon-img {
+  margin-bottom: 15px;
+}
+
+.container__type {
+  margin-bottom: 10px;
 }
 
 /* Sets the styles for the list of Pokemons */
@@ -204,6 +196,7 @@ img {
 .bg-light {
   background-color: #fff !important;
   border-bottom: 3px solid aquamarine;
+
   padding: 20px;
   /* height: 70px; */
 }
@@ -272,6 +265,10 @@ input[type="search"]::-webkit-search-cancel-button {
 .form-control:focus {
   border-color: #333;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px 1px #333;
+}
+
+.form-control {
+  width: 100% !important;
 }
 
 /* Change the styles for the input field search bar */
@@ -392,54 +389,6 @@ small {
   font-size: 100%;
 }
 
-.container__type {
-  margin-bottom: 21px;
-}
-
-
-.dropbtn {
-    background-color: #4caf50;
-    color: white;
-    padding: 16px;
-    width: 70%;
-    font-size: 26px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 50%;
-    margin-left: 25%;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    cursor: pointer;
-    color: black;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+.loading {
+  padding: 20px;
 }
