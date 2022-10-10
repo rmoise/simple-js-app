@@ -22,6 +22,7 @@ let pokemonRepository = (function () {
     function addListItem(pokemon) {
         loadDetails(pokemon).then(function () {
             let type = document.createElement('p');
+
             let acc = `</div>
               <div class="item__informations">
                   <div class="container__type">
@@ -38,6 +39,7 @@ let pokemonRepository = (function () {
 
             let image = document.createElement('img');
             image.setAttribute('src', pokemon.imageUrl);
+            image.classList.add('pokemon-img');
             listItem.append(image);
 
             listItem.appendChild(title);
