@@ -4,6 +4,7 @@ let pokemonRepository = (function () {
     let pokemonList = [];
     /* Loads the list of 10 Pokemons from an external link */
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+    const types = [];
 
     /* This function adds new single item to the pokemonList array */
     function add(pokemon) {
@@ -22,7 +23,6 @@ let pokemonRepository = (function () {
     function addListItem(pokemon) {
         loadDetails(pokemon).then(function () {
             let type = document.createElement('p');
-
             let acc = `</div>
               <div class="item__informations">
                   <div class="container__type">
@@ -39,7 +39,6 @@ let pokemonRepository = (function () {
 
             let image = document.createElement('img');
             image.setAttribute('src', pokemon.imageUrl);
-            image.classList.add('pokemon-img');
             listItem.append(image);
 
             listItem.appendChild(title);
@@ -103,8 +102,8 @@ let pokemonRepository = (function () {
                     add(pokemon);
                 });
             })
+
             .catch(function (e) {
-                hideLoadingMessage();
                 console.error(e);
             });
     }
@@ -258,13 +257,59 @@ let pokemonRepository = (function () {
         }
     });
 
+    // show filtered items and hide the rest
+    function typeFilter(type) {
+        let showFiltered = [];
+        let hideUnfiltered = [];
+        if (type === 'all') {
+            showFiltered = pokemonList;
+        } else {
+            hideUnfiltered = pokemonList.filter(function (pokemon) {
+                // FIND ALL THE ITEMS THAT DO NOT CONTAIN SEARCH KEY
+                if (pokemon.type !== type) {
+                    return pokemon;
+                }
+            });
+
+            showFiltered = pokemonList.filter(function (pokemon) {
+                // FIND ALL THE ITEMS THAT CONTAIN SEARCH KEY
+                if (pokemon.type === type) {
+                    return pokemon;
+                }
+            });
+        }
+
+        hideUnfiltered.map((pokemon) => {
+            document.getElementById(pokemon.id).classList.add('hide-item');
+        });
+        showFiltered.map((pokemon) => {
+            document.getElementById(pokemon.id).classList.remove('hide-item');
+        });
+    }
+
+    // create categories list in dropdown menu
+    function loadTypes() {
+        $('#category-dropdown').append(
+            `<li class="dropdown-item"><button id="all" onclick="pokemonRepository.typeFilter('all')" class="filter-button btn">All Categories</button></li>`
+        );
+        types.forEach((type) =>
+            $('#category-dropdown').append(
+                `<li class="dropdown-item"><button id="${type}" onclick="pokemonRepository.typeFilter('${type}')" class="filter-button btn">${
+                    type.charAt(0).toUpperCase() + type.slice(1)
+                }</button></li>`
+            )
+        );
+    }
+
     // Defines the keywords for the function that are used for execution outside of IIFE
     return {
         add: add,
         getAll: getAll,
         addListItem: addListItem,
         loadList: loadList,
-        loadDetails: loadDetails
+        loadDetails: loadDetails,
+        loadTypes: loadTypes,
+        typeFilter: typeFilter
     };
 })();
 
