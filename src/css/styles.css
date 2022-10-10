@@ -138,6 +138,10 @@ p {
   background: #fff;
 }
 
+.modal-img {
+     width: 45%!important;
+}
+
 /* Sets the styles for the image of Pokemons in modal */
 .pokemon-img,
 .modal-img {
