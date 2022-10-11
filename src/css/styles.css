@@ -1,28 +1,28 @@
 /* Sets the styles for all html and body tags */
 html,
 body {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 /* Sets the styles for all h1 */
 h4,
 h1 {
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 17px;
 }
 
 /* Sets the styles for all paragraphs */
 p {
-    margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .btn:active {
-    background-color: #f0f0f1;
-    border-color: rgba(0, 0, 0, 0.15);
-    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-    color: rgba(0, 0, 0, 0.65);
-    transform: translateY(0);
+  background-color: #f0f0f1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
 }
 
 /* Sets the styles for the button */
@@ -46,28 +46,28 @@ p {
 
 /* Sets the styles for the button hover */
 .btn:hover {
-    border-color: #000;
+  border-color: #000;
 
-    background-color: #000;
-    color: rgb(255, 255, 255);
-    border: 3px solid #000;
-    transform: translateY(-1px);
-    box-shadow: rgba(0, 0, 0, 0.3) 0 4px 12px;
+  background-color: #000;
+  color: rgb(255, 255, 255);
+  border: 3px solid #000;
+  transform: translateY(-1px);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 4px 12px;
 }
 
 .card {
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 .card:hover {
-    cursor: pointer;
-    border: 3px solid #333;
-    animation-name: bounce;
-    -moz-animation-name: bounce;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 12px 12px;
+  cursor: pointer;
+  border: 3px solid #333;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 12px 12px;
 }
 
 @keyframes bounce {
@@ -88,30 +88,30 @@ p {
 
 /* Sets the styles for the button click. Removes default color */
 .btn:focus {
-    outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
 
 /* Sets the styles for the modal header */
 .modal-header {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 
 .modal {
-    background-color: #f1f1f174;
+  background-color: #f1f1f174;
 }
 
 /* Sets the styles for the modal footer */
 .modal-footer {
-    border-top: 0;
+  border-top: 0;
 }
 
 /* Sets the styles for the modal title. Adds an underline element */
 .modal-title {
-    content: ''; /* This is necessary for the pseudo element to work. */
-    display: block; /* This will put the pseudo element on its own line. */
+  content: ""; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
 
-    width: 95.12%; /* Change this to whatever width you want. */
+  width: 95.12%; /* Change this to whatever width you want. */
 
   position: absolute;
   right: 10px;
@@ -139,7 +139,7 @@ p {
 }
 
 .modal-img {
-     width: 45%!important;
+  width: 45% !important;
 }
 
 /* Sets the styles for the image of Pokemons in modal */
@@ -164,36 +164,36 @@ p {
 
 /* Sets the styles for the list of Pokemons */
 .list-group {
-    margin-top: 18px;
+  margin-top: 18px;
 }
 
 /* Sets the styles for the list of Pokemons */
 .list-group-item {
-    background-color: #f1f1f1;
-    border-top: 0;
-    border-bottom: 0;
-    padding: 0.5rem 1.25rem;
+  background-color: #f1f1f1;
+  border-top: 0;
+  border-bottom: 0;
+  padding: 0.5rem 1.25rem;
 }
 
 /* Sets the styles for the list of Pokemons */
 .list-group-item:first-child {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 /* Sets the styles for the list of Pokemons */
 .list-group-item:last-child {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 /* Sets the styles for the navbar. Adds a gap to the search bar nav in mobile */
 .navbar {
-    gap: 15px;
+  gap: 15px;
 }
 
 /* Sets the styles for the navbar. Causes the search bar to be aligned at the right-end of the page */
 .navbar-expand-lg .navbar-collapse {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 /* Sets the styles for the navbar background */
@@ -207,68 +207,68 @@ p {
 
 /* Sets the styles for the logo */
 .navbar-brand {
-    font-weight: bold;
-    font-size: 26px;
+  font-weight: bold;
+  font-size: 26px;
 }
 .navbar-light .navbar-brand {
-    color: #333;
+  color: #333;
 }
 
 /* Sets the styles for the icon logo */
 .img-logo {
-    width: 30px;
-    float: left;
-    margin-right: 8px;
-    margin-top: 0;
+  width: 30px;
+  float: left;
+  margin-right: 8px;
+  margin-top: 0;
 }
 
 /* Sets the styles for the icon logo and text */
 .icon,
 .text {
-    vertical-align: middle;
-    display: inline-block;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 /* Sets the styles for the input field. Adds a custom "X" icon that can be displayed on mobile */
-input[type='search']::-webkit-search-cancel-button {
-    /* Remove default */
-    -webkit-appearance: none;
+input[type="search"]::-webkit-search-cancel-button {
+  /* Remove default */
+  -webkit-appearance: none;
 
-    /* Adds custom styles */
-    height: 14px;
-    width: 14px;
-    display: block;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAn0lEQVR42u3UMQrDMBBEUZ9WfQqDmm22EaTyjRMHAlM5K+Y7lb0wnUZPIKHlnutOa+25Z4D++MRBX98MD1V/trSppLKHqj9TTBWKcoUqffbUcbBBEhTjBOV4ja4l4OIAZThEOV6jHO8ARXD+gPPvKMABinGOrnu6gTNUawrcQKNCAQ7QeTxORzle3+sDfjJpPCqhJh7GixZq4rHcc9l5A9qZ+WeBhgEuAAAAAElFTkSuQmCC);
-    /* setup all the background tweaks for our custom icon */
-    background-repeat: no-repeat;
+  /* Adds custom styles */
+  height: 14px;
+  width: 14px;
+  display: block;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAn0lEQVR42u3UMQrDMBBEUZ9WfQqDmm22EaTyjRMHAlM5K+Y7lb0wnUZPIKHlnutOa+25Z4D++MRBX98MD1V/trSppLKHqj9TTBWKcoUqffbUcbBBEhTjBOV4ja4l4OIAZThEOV6jHO8ARXD+gPPvKMABinGOrnu6gTNUawrcQKNCAQ7QeTxORzle3+sDfjJpPCqhJh7GixZq4rHcc9l5A9qZ+WeBhgEuAAAAAElFTkSuQmCC);
+  /* setup all the background tweaks for our custom icon */
+  background-repeat: no-repeat;
 
-    /* icon size */
-    background-size: 14px;
+  /* icon size */
+  background-size: 14px;
 }
 
 /* Sets the styles for the toggler. Adds color to the navbar toggler icon hamburger icon */
 .custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(51, 51, 51)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(51, 51, 51)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 /* Sets the styles for the toggler. Customizes the navbar toggler border */
 .custom-toggler.navbar-toggler {
-    border: 3px solid rgb(51, 51, 51);
-    border-radius: 0;
-    outline: none;
-    box-shadow: none;
+  border: 3px solid rgb(51, 51, 51);
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
 }
 
 /* Sets the styles for the return nothing search message */
 .error {
-    display: none;
-    padding: 20px;
+  display: none;
+  padding: 20px;
 }
 
 /* Sets the styles for the input field search bar */
 .form-control:focus {
-    border-color: #333;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px 1px #333;
+  border-color: #333;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px 1px #333;
 }
 
 .form-control {
@@ -278,119 +278,123 @@ input[type='search']::-webkit-search-cancel-button {
 /* Change the styles for the input field search bar */
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
-    transition: background-color 600000s 0s, color 600000s 0s;
+  transition: background-color 600000s 0s, color 600000s 0s;
 }
 input[data-autocompleted] {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 /* Disabled Previous and Next buttons */
 .pokemon-nav1--disabled {
-    visibility: hidden;
+  visibility: hidden;
 }
 .pokemon-nav2--disabled {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .row {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* BACKGROUND OF TYPES POKEMONS*/
 small.type.grass {
-    background: #defde0;
+  background: #defde0;
 }
 
 small.type.poison {
-    background: #98d7a5;
+  background: #98d7a5;
 }
 
 small.type.steel {
-    background: #6b6d6e;
+  background: #6b6d6e;
 }
 
 small.type.fire {
-    background: #fddfdf;
+  background: #fddfdf;
 }
 small.type.electric {
-    background: #fcf7de;
+  background: #fcf7de;
 }
 
 small.type.water {
-    background: #def3fd;
+  background: #def3fd;
 }
 
 small.type.ice {
-    background: #a6d8e6;
+  background: #a6d8e6;
 }
 
 small.type.ground {
-    background: #f4e7da;
+  background: #f4e7da;
 }
 
 small.type.rock {
-    background: #d5d5d4;
+  background: #d5d5d4;
 }
 
 small.type.fairy {
-    background: #fceaff;
+  background: #fceaff;
 }
 
 small.type.bug {
-    background: #f8d5a3;
+  background: #f8d5a3;
 }
 
 small.type.dragon {
-    background: #97b3e6;
+  background: #97b3e6;
 }
 
 small.type.psychic {
-    background: #7979c296;
+  background: #7979c296;
 }
 
 small.type.flying {
-    background: #f5f5f5;
+  background: #f5f5f5;
 }
 
 small.type.fighting {
-    background: #e6e0d4;
+  background: #e6e0d4;
 }
 
 small.type.ghost {
-    background: #7979c260;
+  background: #7979c260;
 }
 
 small.type.normal {
-    background: #f5f5f5;
+  background: #f5f5f5;
 }
 
 #pokemon-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 20px;
-    padding-inline-start: 0;
-    margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+  padding-inline-start: 0;
+  margin-top: 30px;
 }
 
 .card {
-    list-style: none;
-    padding: 40px;
-    background-color: #f4f4f4;
-    color: #222;
-    text-align: center;
-    background-color: #fff;
-    border: 3px solid aquamarine;
-    border-radius: 0;
+  list-style: none;
+  padding: 40px;
+  background-color: #f4f4f4;
+  color: #222;
+  text-align: center;
+  background-color: #fff;
+  border: 3px solid aquamarine;
+  border-radius: 0;
 }
 
 .card:hover {
-    animation: bounce 0.5s linear;
+  animation: bounce 0.5s linear;
 }
 
 .small,
 small {
-    font-size: 100%;
+  font-size: 100%;
+  padding: 6px;
+  padding-right: 100px;
+  padding-left: 100px;
+  text-transform: capitalize;
 }
 
 .loading {
