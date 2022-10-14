@@ -21,25 +21,25 @@ let pokemonRepository = (function () {
 
     function addListItem(pokemon) {
         loadDetails(pokemon).then(function () {
-            let type = document.createElement('p');
+            let type = document.createElement('div');
+            type.classList.add('tags');
 
-            let acc = `</div>
-              <div class="item__informations">
-                  <div class="container__type">
-                      <small class="type ${pokemon.types.split(',')[0]}">
-                        ${pokemon.types.split(',')[0]}
+            let acc = `
+                      <small id= poke-type class="type ${pokemon.types.split(',')}">
+                        ${pokemon.types.split(',')}
                       </small>
-                  </div>
-              </div>`;
+
+                      `;
             type.innerHTML += acc;
 
             let title = document.createElement('h4');
             title.classList.add('card-title');
             title.innerHTML = pokemon.name;
+            listItem.id = 'pokemon-' + pokemon.id.toString();
 
             let image = document.createElement('img');
-            image.setAttribute('src', pokemon.imageUrl);
             image.classList.add('pokemon-img');
+            image.setAttribute('src', pokemon.imageUrl);
             listItem.append(image);
 
             listItem.appendChild(title);
@@ -103,8 +103,8 @@ let pokemonRepository = (function () {
                     add(pokemon);
                 });
             })
+
             .catch(function (e) {
-                hideLoadingMessage();
                 console.error(e);
             });
     }
@@ -127,6 +127,7 @@ let pokemonRepository = (function () {
                 item.abilities = details.abilities.map((ability) => ability.ability.name).join(', ');
                 item.id = details.id;
             })
+
             .catch(function (e) {
                 hideLoadingMessage();
                 console.error(e);
@@ -254,6 +255,42 @@ let pokemonRepository = (function () {
             let _opened = $navbar.hasClass('show');
             if (_opened === true && !clickover.hasClass('navbar-toggle')) {
                 $navbar.collapse('hide');
+            }
+        }
+    });
+
+    var e = document.getElementById('inlineFormCustomSelect');
+    function onChange() {
+        var value = e.value;
+        var text = e.options[e.selectedIndex].text;
+        console.log(value, text);
+    }
+    e.onchange = onChange;
+    onChange();
+
+    let selectForm = document.getElementById('inlineFormCustomSelect');
+    selectForm.addEventListener('change', function () {
+        var value = e.value;
+        let cards = document.querySelectorAll('.card');
+        // Locate the search input
+        let search_query = document.getElementById('inlineFormCustomSelect').value;
+        // Loop through the cards
+        for (var i = 0; i < cards.length; i++) {
+            // If the text is within the card...
+            if (
+                cards[i].innerText
+                    .toLowerCase()
+                    // ...and the text matches the search query...
+                    .includes(search_query.toLowerCase())
+            ) {
+                // ...remove the `.is-hidden` class.
+                cards[i].classList.remove('is_hidden');
+            } else {
+                // Otherwise, add the class.
+                cards[i].classList.add('is_hidden');
+            }
+            if (value === 'all') {
+                cards[i].classList.remove('is_hidden');
             }
         }
     });

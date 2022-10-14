@@ -392,11 +392,20 @@ small.type.normal {
 small {
   font-size: 100%;
   padding: 6px;
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-right: 50px;
+  padding-left: 50px;
   text-transform: capitalize;
 }
 
 .loading {
   padding: 20px;
+}
+
+.is_hidden {
+  display: none !important;
+}
+
+.tags {
+  padding-bottom: 30px;
+  padding-top: 10px;
 }

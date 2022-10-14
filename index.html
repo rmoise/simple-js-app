@@ -30,12 +30,43 @@
 
             <!-- Adds the Search Bar inside the nav Bar -->
             <form class="form-inline">
-                <input class="form-control mr-sm-2 searchBtn" type="search" placeholder="Search a Pokemon" aria-label="Search" id="search-bar">
+                <form id="filter-form">
+                    <div class="form-row align-items-center">
+                        <div class="col-auto my-1">
+                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <option selected>Choose a type...</option>
+                                <option value="all">All</option>
+                                <option value="normal">Normal</option>
+                                <option value="fighting">Fighting</option>
+                                <option value="flying">Flying</option>
+                                <option value="poison">Poison</option>
+                                <option value="ground">Ground</option>
+                                <option value="rock">Rock</option>
+                                <option value="bug">Bug</option>
+                                <option value="ghost">Ghost</option>
+                                <option value="steel">Steel</option>
+                                <option value="fire">Fire</option>
+                                <option value="water">Water</option>
+                                <option value="grass">Grass</option>
+                                <option value="electric">Electric</option>
+                                <option value="psychic">Psychic</option>
+                                <option value="ice">Ice</option>
+                                <option value="dragon">Dragon</option>
+                                <option value="dark">Dark</option>
+                                <option value="fairy">Fairy</option>
+                                <option value="unknown">Unknown</option>
+                                <option value="shadow">Shadow</option>
+                            </select>
+                        </div>
+                        <div class="col-auto my-1">
+                        </div>
+                    </div>
+                </form>
+                <input class="form-control col-md-3 mr-sm-2 searchBtn" type="search" placeholder="Search a Pokemon" aria-label="Search" id="search-bar">
             </form>
         </div>
 
     </nav>
-
     <!-- Adds the list of Pokemons using Bootstrap. -->
     <div class="container col-sm col-md col-lg">
         <ul id="pokemon-list"></ul>
