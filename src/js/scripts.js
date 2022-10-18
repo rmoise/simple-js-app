@@ -39,12 +39,19 @@ let pokemonRepository = (function () {
 
             let image = document.createElement('img');
             image.classList.add('pokemon-img');
+            let imageContainer = document.createElement('div');
+            imageContainer.classList.add('card-img-top');
+            let cardBody = document.createElement('div');
+            cardBody.classList.add('card-body');
             image.setAttribute('src', pokemon.imageUrl);
-            listItem.append(image);
 
-            listItem.appendChild(title);
-            listItem.appendChild(type);
-            listItem.appendChild(button);
+            imageContainer.append(image);
+            listItem.append(imageContainer);
+            listItem.append(cardBody);
+
+            cardBody.appendChild(title);
+            cardBody.appendChild(type);
+            cardBody.appendChild(button);
         });
 
         /* loadDetails(pokemon).then(function () { */
