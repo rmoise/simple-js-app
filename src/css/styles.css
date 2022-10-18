@@ -86,6 +86,10 @@ p {
   box-shadow: rgba(0, 0, 0, 0.1) 0 12px 12px;
 }
 
+.card-title {
+    margin-bottom: 0.25rem;
+}
+
 @keyframes bounce {
   20% {
     transform: translateY(-6px);
