@@ -182,6 +182,10 @@ p {
   margin-bottom: 10px;
 }
 
+.container {
+ top: -11px;
+}
+
 /* Sets the styles for the list of Pokemons */
 .list-group {
   margin-top: 18px;
@@ -322,7 +326,7 @@ small.type.steel {
 }
 
 small.type.fire {
-  background: #FDDFDF;
+  background: #ffbea6a4;
 }
 small.type.electric {
   background: #fcf7de;
