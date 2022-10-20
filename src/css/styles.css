@@ -444,3 +444,8 @@ small {
   padding-bottom: 30px;
   padding-top: 10px;
 }
+
+.mb-1, .my-1 {
+    margin-bottom: 0.5rem!important;
+     margin-top: 0.5rem!important;
+}
