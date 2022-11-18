@@ -7,7 +7,7 @@
     <img src="img/logo-readme.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h1 align="center">Pokédex - Simple JS App. Technical Case Study</h1>
+  <h1 align="center">Pokédex - Simple JS App - Technical Case Study</h1>
 
   <p align="center">
     <a href="https://rmoise.github.io/simple-js-app/">View Demo</a>
