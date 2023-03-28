@@ -96,7 +96,7 @@ My users should be able to view a list of data and see more details for a given 
 * The app must use at least one additional complex UI pattern, such as a modal, for details or  touch interactions.
   * The app may allow searching for items (e.g., searching for Pokémon).
 * The app must not throw any errors when being used.
-* The app should be deployed to a publicly accessible platform like GitHub Pages (you can  review how to do this in Intro to Frontend Development's Exercise 10: Code Quality, Testing, &  Web Hosting ).
+* The app should be deployed to a publicly accessible platform like GitHub Pages.
 * The app must work in Chrome, Firefox, Safari, Edge, and Internet Explorer 11.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
